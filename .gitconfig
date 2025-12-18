@@ -17,3 +17,5 @@
 	sd = stash drop
 	ssh = stash show
 
+[core]
+	editor = vim

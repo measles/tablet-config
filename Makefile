@@ -1,4 +1,4 @@
-.PHONY: all bash git
+.PHONY: all bash git vim
 .DEFAULT_GOAL = all
 
 bash:
@@ -7,4 +7,9 @@ bash:
 git:
 	cp -af .gitconfig ~/.gitconfig
 
-all: bash git
+vim:
+	rm -f ${HOME}/.vimrc
+	rm -fr ${HOME}/.config/nvim
+	ln -s ${PWD}/nvim ${HOME}/.config/nvim
+
+all: bash git vim
